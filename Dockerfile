@@ -5,7 +5,7 @@ FROM devopsedu/webapp:latest
 WORKDIR /usr/src/app
 
 # Copy application files from the host to the container
-COPY . /usr/src/app
+COPY projCert-master /usr/src/app
 
 # Install necessary dependencies
 RUN apt-get update && \
