@@ -19,8 +19,8 @@
     - name: Update apt package index again
       command: apt-get update
 
-#    - name: Install Docker
-#      command: apt-get install -y docker-ce
+   - name: Install Docker
+     command: apt-get install -y docker-ce
 
     - name: Start and enable Docker
       command: systemctl enable --now docker

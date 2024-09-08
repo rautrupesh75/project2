@@ -7,9 +7,8 @@ WORKDIR /usr/src/app
 # Copy application files from the host to the container
 COPY projCert-master /usr/src/app
 
-# Install necessary dependencies
-RUN apt-get update && \
-    apt-get install -y <dependencies>
+# Install necessary dependencies (replace with actual dependencies)
+RUN apt-get update 
 
 # Expose the application port
 EXPOSE 8090
