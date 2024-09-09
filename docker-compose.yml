@@ -1,0 +1,23 @@
+version: "5"
+services:
+  enggadda:
+    image: mongo:latest
+    container_name: "enggadda"
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data/db
+  springdockercompose:
+    image: rautrupesh/springdockercompose:latest
+    container_name: "springdockercompose"
+    ports:
+      - 9090:8080
+    links:
+      - enggadda
+volumes:
+  mongo-data:
+    driver: local
+    driver_opts:
+      type: "none"
+      o: "bind"
+      device: "/var/lib/misc"
